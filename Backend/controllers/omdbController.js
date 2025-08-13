@@ -26,7 +26,7 @@ const searchMovies = async (req, res) => {
             }
         });
         
-        if(response.data.Reponse === 'False') {
+        if(response.data.Response === 'False') {
             return res.status(404).json({ error: response.data.Error});
         }
 

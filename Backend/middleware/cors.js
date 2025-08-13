@@ -2,7 +2,8 @@ const cors = require('cors');
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'http://localhost:3000'
+  'http://localhost:3000',
+  'https://ohlssondevomdb.netlify.app'
 ];
 
 const corsOptions = {

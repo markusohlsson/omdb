@@ -2,6 +2,8 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
 
+const API_BASE = 'https://omdb-lgm1.onrender.com/api';
+
 export const useSearchStore = defineStore('search', {
   state: () => ({
     results: [],
@@ -22,7 +24,7 @@ export const useSearchStore = defineStore('search', {
       this.lastQuery = query
       this.hasSearched = true
       try {
-        const response = await axios.get('http://localhost:3000/api/search', {
+        const response = await axios.get(`${API_BASE}/search`, {
           params: { query, page }
         })
 
@@ -34,21 +36,17 @@ export const useSearchStore = defineStore('search', {
         this.loading = false
       }
     },
-    async fetchMovie (id) {
+    async fetchMovie(id) {
       this.loading = true
       this.error = null
-      
       try {
-        const response = await axios.get('http://localhost:3000/api/movies/' + id) 
-        
-        this.selectedMovie = response.data;
+        const response = await axios.get(`${API_BASE}/movies/${id}`)
+        this.selectedMovie = response.data
       } catch (error) {
-        this.error = error.message || 'Failed to fetch';
+        this.error = error.message || 'Failed to fetch'
       } finally {
-        this.loading = false;
+        this.loading = false
       }
-
-
     }
   }
 })
