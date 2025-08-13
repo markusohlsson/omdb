@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+#app {
+  @apply bg-gray-900 min-h-screen text-gray-200;
+}

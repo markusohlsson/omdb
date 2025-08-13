@@ -1,8 +1,9 @@
 <template>
-  <div>
-    <h2>{{ movie.Title }} - {{ movie.Year }}</h2>
-    <div>
-      <img :src="movie.Poster" :alt="movie.Title" />
+  <div class="movie">
+    <h2 class="movie-title">{{ movie.Title }}</h2>
+    <p>{{ movie.Year }}</p>
+    <div class="poster-container">
+      <img class="poster" :src="movie.Poster" :alt="movie.Title" />
     </div>
   </div>
 </template>
@@ -12,3 +13,6 @@ defineProps({
   movie: Object,
 })
 </script>
+
+<style>
+</style>

@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <Search />
-        <SearchResult />
-    </div>
+  <div class="space-y-6 p-4 max-w-4xl mx-auto">
+    <Search />
+    <SearchResult />
+  </div>
 </template>
 
 <script setup>
