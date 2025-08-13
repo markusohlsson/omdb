@@ -1,7 +1,19 @@
 <template>
-    <div v-if="searchStore.loading">Loading...</div>
-  <div v-if="!searchStore.loading" class="max-w-5xl mx-auto p-6 bg-gray-900 text-gray-200 rounded-lg shadow-lg">
-    <h1 class="text-4xl font-extrabold mb-6">{{ selectedMovie.Title }}</h1>
+  <Loading v-if="searchStore.loading" class="flex justify-center items-center"/>
+
+  <div v-if="!searchStore.loading" class="max-w-5xl mx-auto p-6 bg-gray-900 text-gray-200 rounded-lg shadow-lg relative">
+    
+    <!-- Sticky Back Button -->
+    <button
+      @click="goBack"
+      class="flex items-center text-gray-400 hover:text-gray-200 space-x-2 sticky top-4 z-50 mb-6 cursor-pointer"
+    >
+      <ArrowLeft class="w-6 h-6"/>
+      <span>Back</span>
+    </button>
+
+    <!-- Movie Title -->
+    <h1 class="text-4xl font-extrabold mb-6 mt-4">{{ selectedMovie.Title }}</h1>
 
     <div class="flex flex-col md:flex-row gap-8">
       <!-- Poster -->
@@ -69,13 +81,19 @@
   </div>
 </template>
 
-
 <script setup>
-import { computed } from 'vue';
-import { useSearchStore } from '../stores/searchStore';
+import { useRouter } from 'vue-router'
+import { useSearchStore } from '../stores/searchStore'
+import ArrowLeft from 'lucide-vue-next/dist/esm/icons/arrow-left.js'
+import Loading from '../components/Loading.vue'
+import { computed } from 'vue'
 
-const searchStore = useSearchStore();
-const selectedMovie = computed(() => searchStore.selectedMovie)
+const router = useRouter()
+const searchStore = useSearchStore()
 
+const selectedMovie = computed(()=> searchStore.selectedMovie)
 
+function goBack() {
+  router.back()
+}
 </script>

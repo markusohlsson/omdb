@@ -3,7 +3,7 @@
     <div class="max-w-6xl mx-auto flex justify-between items-center">
       <!-- Logo / Brand -->
       <div class="text-xl font-bold cursor-pointer">
-        <a href="/">MySite</a>
+        <a href="/">OpenMovieDatabase</a>
       </div>
 
       <!-- Desktop Menu -->

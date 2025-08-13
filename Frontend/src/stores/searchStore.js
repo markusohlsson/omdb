@@ -12,6 +12,7 @@ export const useSearchStore = defineStore('search', {
     itemsPerPage: 10,
     lastQuery: '',
     selectedMovie: null,
+    hasSearched: false,
   }),
   actions: {
     async fetchResults(query, page = 1) {
@@ -19,7 +20,7 @@ export const useSearchStore = defineStore('search', {
       this.error = null
       this.currentPage = page
       this.lastQuery = query
-
+      this.hasSearched = true
       try {
         const response = await axios.get('http://localhost:3000/api/search', {
           params: { query, page }
