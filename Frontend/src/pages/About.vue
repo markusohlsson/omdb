@@ -1,7 +1,6 @@
 <template>
   <div class="max-w-5xl mx-auto p-6 bg-gray-900 text-gray-200 space-y-10">
     
-    <!-- About -->
     <section>
       <h1 class="text-3xl font-bold text-primary mb-4 flex items-center gap-2">
         <Film class="w-6 h-6"/> About This Project
@@ -19,7 +18,6 @@
       </p>
     </section>
 
-    <!-- Backend -->
     <section>
       <h2 class="text-2xl font-semibold text-primary mb-3 flex items-center gap-2">
         <Database class="w-5 h-5"/> Backend (Node.js + Express)
@@ -33,7 +31,6 @@
       </p>
     </section>
 
-    <!-- Frontend -->
     <section>
       <h2 class="text-2xl font-semibold text-primary mb-3 flex items-center gap-2">
         <Cpu class="w-5 h-5"/> Frontend (Vue 3 + Vite)
@@ -46,7 +43,6 @@
       </p>
     </section>
 
-    <!-- Core Functionality -->
     <section>
       <h2 class="text-2xl font-semibold text-primary mb-3 flex items-center gap-2">
         <Zap class="w-5 h-5"/> Core Functionality

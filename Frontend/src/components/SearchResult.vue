@@ -1,6 +1,5 @@
 <template>
   <div class="p-6 bg-gray-900 min-h-screen text-gray-200 space-y-6">
-    <!-- Search bar in narrow container -->
     <div class="max-w-xl mx-auto">
       <Loading v-if="searchStore.loading" class="flex justify-center items-center"/>
       <p v-if="searchStore.error" class="text-center text-red-500 font-semibold">
@@ -27,10 +26,7 @@
     />
   </div>
 
-  <!-- Pagination -->
-<!-- Pagination -->
 <div v-if="totalPages > 1" class="flex justify-center items-center mt-10 flex-wrap gap-1 sm:gap-2">
-  <!-- First Page -->
   <button
     :disabled="currentPageNum === 1"
     @click="changePage(1)"
@@ -39,7 +35,6 @@
     <ChevronsLeft class="w-4 h-4"/>
   </button>
 
-  <!-- Previous Page -->
   <button
     :disabled="currentPageNum === 1"
     @click="changePage(currentPageNum - 1)"
@@ -48,7 +43,6 @@
     <ChevronLeft class="w-4 h-4"/>
   </button>
 
-  <!-- Page Numbers -->
   <template v-for="page in visiblePages" :key="page">
     <button
       @click="changePage(page)"
@@ -61,7 +55,6 @@
     </button>
   </template>
 
-  <!-- Next Page -->
   <button
     :disabled="currentPageNum === totalPages"
     @click="changePage(currentPageNum + 1)"
@@ -70,7 +63,6 @@
     <ChevronRight class="w-4 h-4"/>
   </button>
 
-  <!-- Last Page -->
   <button
     :disabled="currentPageNum === totalPages"
     @click="changePage(totalPages)"

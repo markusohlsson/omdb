@@ -3,7 +3,6 @@
 
   <div v-if="!searchStore.loading" class="max-w-5xl mx-auto p-6 bg-gray-900 text-gray-200 rounded-lg shadow-lg relative">
     
-    <!-- Sticky Back Button -->
     <button
       @click="goBack"
       class="flex items-center text-gray-400 hover:text-gray-200 space-x-2 sticky top-4 z-50 mb-6 cursor-pointer"
@@ -12,11 +11,9 @@
       <span>Back</span>
     </button>
 
-    <!-- Movie Title -->
     <h1 class="text-4xl font-extrabold mb-6 mt-4">{{ selectedMovie.Title }}</h1>
 
     <div class="flex flex-col md:flex-row gap-8">
-      <!-- Poster -->
       <div class="flex-shrink-0 w-full md:w-72 rounded-lg overflow-hidden bg-gray-800 shadow-md h-[450px]">
         <img
           :src="selectedMovie.Poster"
@@ -25,9 +22,7 @@
         />
       </div>
 
-      <!-- Movie Info -->
       <div class="flex flex-col flex-grow space-y-4">
-        <!-- Basic Info -->
         <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-gray-300 text-sm md:text-base">
           <p><span class="font-semibold text-gray-400">Year:</span> {{ selectedMovie.Year }}</p>
           <p><span class="font-semibold text-gray-400">Rated:</span> {{ selectedMovie.Rated }}</p>
@@ -43,14 +38,11 @@
           <p><span class="font-semibold text-gray-400">Box Office:</span> {{ selectedMovie.BoxOffice }}</p>
           <p><span class="font-semibold text-gray-400">Type:</span> {{ selectedMovie.Type }}</p>
         </div>
-
-        <!-- Plot -->
         <div class="mt-4">
           <h2 class="text-xl font-semibold mb-2">Plot</h2>
           <p class="text-gray-300">{{ selectedMovie.Plot }}</p>
         </div>
 
-        <!-- Ratings -->
         <div>
           <h2 class="text-xl font-semibold mb-2">Ratings</h2>
           <ul class="grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-300">
@@ -61,7 +53,6 @@
           </ul>
         </div>
 
-        <!-- Additional Scores -->
         <div class="grid grid-cols-3 gap-4 text-gray-300 mt-6 text-center">
           <div>
             <p class="font-semibold">Metascore</p>

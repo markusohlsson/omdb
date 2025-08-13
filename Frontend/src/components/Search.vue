@@ -1,6 +1,5 @@
 <template>
   <div class="flex max-w-md mx-auto relative">
-    <!-- Input field with clear button -->
     <div class="relative flex-grow">
       <input
         type="text"
@@ -10,7 +9,6 @@
         class="w-full px-4 py-2 pr-10 rounded-l-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-200"
       />
 
-      <!-- Clear button inside input -->
       <button
         v-if="query"
         @click="clearInput"
@@ -20,7 +18,6 @@
       </button>
     </div>
 
-    <!-- Search button -->
     <button
       @click="search"
       class="px-5 py-2 bg-blue-600 text-white font-semibold rounded-r-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"

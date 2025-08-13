@@ -2,7 +2,6 @@
   <div 
     class="bg-gray-800 rounded-lg shadow-lg flex flex-col items-center transition-transform hover:scale-105 cursor-pointer"
   >
-    <!-- Poster -->
     <div class="w-full aspect-[2/3] sm:aspect-[2/2.5] overflow-hidden rounded-t-lg">
       <img 
         class="w-full h-full object-cover" 
@@ -11,7 +10,6 @@
       />
     </div>
 
-    <!-- Text info -->
     <div class="p-4 text-center w-full">
       <h2 class="text-lg font-semibold text-gray-200 break-words">
         {{ movie.Title }}

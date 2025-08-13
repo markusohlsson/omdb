@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const corsMiddleware = require('./middleware/cors');
-const { apiLimiter } = require('./middleware/rateLimiter'); // updated import
+const { apiLimiter } = require('./middleware/rateLimiter');
 const omdbRoutes = require('./routes/omdbRoutes');
 
 const app = express();

@@ -1,16 +1,13 @@
 <template>
   <div class="max-w-3xl mx-auto p-6 bg-gray-900 text-gray-200 space-y-6 rounded-lg shadow-lg">
     
-    <!-- Header -->
     <div class="text-center space-y-2">
       <h2 class="text-3xl font-bold text-primary">Contact Us</h2>
       <p class="text-gray-400">This form is not working, only for visual effect</p>
     </div>
 
-    <!-- Form -->
     <form action="" class="space-y-4">
 
-      <!-- Name fields -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="relative">
           <input 
@@ -32,7 +29,6 @@
         </div>
       </div>
 
-      <!-- Email -->
       <div>
         <input 
           type="email" 
@@ -43,7 +39,6 @@
         />
       </div>
 
-      <!-- Phone -->
       <div>
         <input 
           type="tel" 
@@ -54,7 +49,6 @@
         />
       </div>
 
-      <!-- Message -->
       <div>
         <textarea 
           name="message" 
@@ -64,8 +58,6 @@
           class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-gray-200 focus:outline-none focus:border-accent resize-none"
         ></textarea>
       </div>
-
-      <!-- Submit button -->
       <div class="text-center">
         <button 
           type="submit" 
